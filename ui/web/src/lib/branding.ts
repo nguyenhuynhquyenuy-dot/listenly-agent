@@ -5,9 +5,9 @@ export interface RuntimeBranding {
 }
 
 const FALLBACK_BRANDING: RuntimeBranding = {
-  appName: "GoClaw",
-  appShortName: "GoClaw",
-  logoUrl: "/goclaw-icon.svg",
+  appName: "Listenly",
+  appShortName: "Listenly",
+  logoUrl: "/listenly-logo.png",
 };
 
 interface RuntimeBrandingPayload {

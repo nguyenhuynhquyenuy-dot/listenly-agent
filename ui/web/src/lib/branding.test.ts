@@ -7,11 +7,11 @@ describe("runtime branding", () => {
     document.head.innerHTML = "";
   });
 
-  it("falls back to built-in GoClaw branding", () => {
+  it("falls back to built-in Listenly branding", () => {
     expect(getRuntimeBranding()).toEqual({
-      appName: "GoClaw",
-      appShortName: "GoClaw",
-      logoUrl: "/goclaw-icon.svg",
+      appName: "Listenly",
+      appShortName: "Listenly",
+      logoUrl: "/listenly-logo.png",
     });
   });
 

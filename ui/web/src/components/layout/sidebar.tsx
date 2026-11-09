@@ -70,18 +70,14 @@ export function Sidebar({ collapsed, onNavItemClick }: SidebarProps) {
         }
       }}
     >
-      {/* Logo / title */}
+      {/* Logo */}
       <div className="flex h-14 items-center border-b px-4">
-        {!collapsed && (
-          <div className="flex items-center gap-2.5">
-            <img src={branding.logoUrl} alt={branding.appName} className="h-8 w-8" />
-            <span className="text-lg font-bold tracking-tight text-sidebar-primary">
-              {branding.appShortName}
-            </span>
+        {!collapsed ? (
+          <div className="flex items-center">
+            <img src={branding.logoUrl} alt={branding.appName} className="h-8 max-w-[180px] w-auto object-contain" />
           </div>
-        )}
-        {collapsed && (
-          <img src={branding.logoUrl} alt={branding.appName} className="mx-auto h-7 w-7" />
+        ) : (
+          <img src="/listenly-icon.png" alt={branding.appName} className="mx-auto h-7 w-7 object-contain" />
         )}
       </div>
 
