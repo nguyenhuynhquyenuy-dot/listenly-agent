@@ -38,6 +38,22 @@ export default defineConfig(({ mode }) => {
       port: 18790,
       host: "0.0.0.0",
       allowedHosts: true,
+      proxy: {
+        "/ws": {
+          target: `http://${backendHost}:${backendPort}`,
+          ws: true,
+          changeOrigin: true,
+        },
+        "/v1": {
+          target: `http://${backendHost}:${backendPort}`,
+          changeOrigin: true,
+          timeout: 30000,
+        },
+        "/health": {
+          target: `http://${backendHost}:${backendPort}`,
+          changeOrigin: true,
+        },
+      },
     },
     build: {
       outDir: "dist",
