@@ -34,6 +34,11 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    preview: {
+      port: 18790,
+      host: "0.0.0.0",
+      allowedHosts: true,
+    },
     build: {
       outDir: "dist",
       emptyOutDir: true,
