@@ -50,7 +50,7 @@ function TabLoader() {
   const branding = getRuntimeBranding();
   return (
     <div className="py-8 flex justify-center text-muted-foreground">
-      <img src={branding.logoUrl} alt="" className="h-6 w-6 animate-pulse opacity-40" />
+      <img src={branding.logoUrl} alt="" className="h-6 w-auto max-w-[100px] object-contain animate-pulse opacity-40" />
     </div>
   );
 }
